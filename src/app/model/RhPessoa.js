@@ -25,3 +25,5 @@ const RhPessoaSchema = new mongoose.Schema(
         timestamps:true
     }
 );
+
+module.exports = mongoose.model("RhPessoa", RhPessoaSchema);
