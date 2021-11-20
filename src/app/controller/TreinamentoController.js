@@ -1,8 +1,8 @@
-const Pessoa = require('../model/RhPessoa');
-const SalaEvento = require('../model/RhEvento');
+const Pessoa = require('../model/TreinamentoPessoa');
+const SalaEvento = require('../model/TreiamentoEvento');
 
 
-class RhController {
+class TreinamentoController {
     async store(req, res) {
         const dadoPessoa = await Pessoa.create(req.body);
         // const dadoSalaEvento = await Pessoa.create(req.body);
@@ -20,4 +20,4 @@ class RhController {
 }
 
 
-module.exports = new RhController();
+module.exports = new TreinamentoController();

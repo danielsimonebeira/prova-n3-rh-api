@@ -6,7 +6,13 @@ Projeto criado para a N3 da disciplina de Linguagem de Programação III [2021/2
 ## Configuração do banco mongodb cloud
 
 
-criar arquivo .env
+criar arquivo _.env_
+
+Inserir a variaveis:
+
+`MONGO_CONECTA_STRING=<caminho_mongo_cloud>`
+
+`PORT=<numeto_porta>`
 
 
 
