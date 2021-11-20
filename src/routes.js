@@ -2,15 +2,18 @@ const express = require('express');
 
 
 const routes = express.Router();
-const RhController = require('./app/controller/RhController');
+const TreinamentoController = require('./app/controller/TreinamentoController');
 
-// routes.get('/', function(req, res) {
-//     return res.json({ meassage: "Minha primeira rota!" });
-// });
+routes.get('/', function(req, res) {
+    res.status(200).send({
+        title: 'TreinamentoAPI',
+        version: '1.0.0'
+    })
+});
 
-routes.get('/rh', RhController.index);
+routes.get('/rh', TreinamentoController.index);
 
-routes.post('/rh', RhController.store);
+routes.post('/rh', TreinamentoController.store);
 
 
 module.exports = routes;
