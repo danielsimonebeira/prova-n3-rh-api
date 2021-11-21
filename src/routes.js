@@ -11,9 +11,14 @@ routes.get('/', function(req, res) {
     })
 });
 
-routes.get('/rh', TreinamentoController.index);
 
-routes.post('/rh', TreinamentoController.store);
+routes.post('/api/v1/treinamento', TreinamentoController.adiciona);
+
+routes.get('/api/v1/treinamento', TreinamentoController.buscaTodos);
+
+routes.put('/api/v1/treinamento/:nome', TreinamentoController.atualiza);
+
+routes.delete('/api/v1/treinamento/:idPessoa', TreinamentoController.removeId);
 
 
 module.exports = routes;

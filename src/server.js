@@ -1,6 +1,9 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+const cors = require('cors');
 const routes = require('./routes');
 
 
@@ -29,7 +32,12 @@ class App {
     }
 
     middlewares() {
-        this.express.use(express.json());
+        this.express.use(morgan('dev'));
+        this.express.use(bodyParser.urlencoded({ extended: false }));
+        // this.express.use(express.json());
+        this.express.use(bodyParser.json());
+        this.express.use(cors());
+
     }
 
     routes() {
