@@ -18,6 +18,8 @@ Inserir a variaveis:
 ## Tecnologias Necessárias para rodar
 
 Node - `npm / yarn`
+mongoose
+Postman
 
 ## Compilar o projeto
 
