@@ -14,7 +14,7 @@ routes.get('/', function(req, res) {
 routes.post('/api/v1/treinamento/pessoa', TreinamentoPessoaController.adiciona);
 routes.get('/api/v1/treinamento/pessoa', TreinamentoPessoaController.buscaTodos);
 routes.get('/api/v1/treinamento/pessoa/:nome', TreinamentoPessoaController.buscaNome);
-routes.put('/api/v1/treinamento/pessoa/:nome', TreinamentoPessoaController.atualiza);
+routes.put('/api/v1/treinamento/pessoa/:idPessoa', TreinamentoPessoaController.atualiza);
 routes.delete('/api/v1/treinamento/pessoa/:idPessoa', TreinamentoPessoaController.removeId);
 
 routes.post('/api/v1/treinamento/evento', TreinamentoEventoController.adiciona);

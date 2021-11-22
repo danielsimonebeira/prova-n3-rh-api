@@ -22,8 +22,7 @@ class TreinamentoEventoController {
 
     async atualiza(req, res) {
         dadoEvento = await SalaEvento.findOneAndUpdate({
-            status: "yes",
-            nome: req.body.SalaEvento.nomeSala
+            nome: req.body.nomeSala
         }, function (err, resultado) {
             if (err) {
                 return res.status(500).send('Ocorreu uma quebra!');
