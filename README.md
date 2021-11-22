@@ -20,6 +20,7 @@ Inserir a variaveis:
 Node - `npm / yarn`
 mongoose
 Postman
+Linguagem JS
 
 ## Compilar o projeto
 
@@ -28,7 +29,7 @@ Etapas: 2
 Etapa 1: Que será para instalar as dependências e rodando na raiz do projeto
 `npm install ou yarn install` 
 
-Etapa 2: Que será para rodar a aplicação de fato no desenvolvimento
+Etapa 2: Que será para rodar a aplicação, de fato, no desenvolvimento
 `npm run dev ou yarn dev`
 
 
@@ -36,8 +37,4 @@ Etapa 2: Que será para rodar a aplicação de fato no desenvolvimento
 
 `yarn start`
 
-
-## Rodar o sistema no modo de desenvolvimento
-
-`yarn dev`
 
