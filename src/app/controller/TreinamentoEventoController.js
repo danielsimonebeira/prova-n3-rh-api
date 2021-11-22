@@ -1,4 +1,4 @@
-const SalaEvento = require('../model/TreiamentoEvento');
+const SalaEvento = require('../model/TreinamentoEvento');
 
 let dadoEvento = '';
 

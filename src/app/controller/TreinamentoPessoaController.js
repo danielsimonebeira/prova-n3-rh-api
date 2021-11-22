@@ -22,13 +22,11 @@ class TreinamentoPessoaController {
     }
 
     async atualiza(req, res) {
-        var novaPessoa = { $set: {
-            nome: req.body.nome,
-            sobrenome: req.body.sobrenome,
-            nuLotacao: req.body.nuLotacao
-        }}
-        Pessoa.findOneAndUpdate({ idPessoa: req.params.idPessoa }, novaPessoa, {upsert: true}, function(err, doc) {
-            if (err) return res.status(500).send(err);
+        Pessoa.findOneAndUpdate({ idPessoa: req.params.idPessoa }, req.body, function(err, doc) {
+            if (err) {
+                console.log(err);
+                return res.status(500).send(err);
+            }
             return res.status(200).send('Atualizado');
         });
     }
