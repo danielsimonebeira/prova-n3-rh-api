@@ -17,10 +17,10 @@ Inserir a variaveis:
 
 ## Tecnologias Necessárias para rodar
 
-Node - `npm / yarn`
-mongoose
-Postman
-Linguagem JS
+- Node - `npm / yarn`
+- mongoose
+- Postman
+- Linguagem JS
 
 ## Compilar o projeto
 
