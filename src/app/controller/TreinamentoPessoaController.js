@@ -1,3 +1,4 @@
+const { query } = require('express');
 const Pessoa = require('../model/TreinamentoPessoa');
 
 let dadoPessoa = '';
@@ -14,25 +15,62 @@ class TreinamentoPessoaController {
         return res.status(200).json(dadoPessoa);
     }
 
-    async atualiza(req, res) {
-        dadoPessoa = await Pessoa.findOneAndUpdate({
-            status: "yes",
-            nome: req.body.Pessoa.nome
-        }, function (err, resultado) {
-            if (err) {
-                return res.status(500).send('Ocorreu uma quebra!');
-            }
-
-            if (resultado.hasOwnProperty("value") && resultado.value !== null) {
-                res.send(true);
+    async buscaNome(req, res) {
+        dadoPessoa = await Pessoa.findOne({ nome: new RegExp('^' + req.body.nome + '$', "i")}, function (err, doc) {
+            if (err) { 
+                console.log(err); 
             } else {
-                res.send(false);
+                return res.status(201).json(dadoPessoa);
             }
         });
     }
 
+    async atualiza(req, res) {
+
+        /*
+
+        dadoPessoa = await Pessoa.findOneAndUpdate({
+            nome: req.body.nome
+        }, req.body, { 
+            upsert: false 
+        }, function (err, doc) {
+            if (err) {
+                res.status(500).json({ error: err.message });
+                res.end();
+                return;
+            }
+            res.status(201).json(req.body);
+            res.end();
+            return;
+        });
+
+
+        dadoPessoa = await Pessoa.findOneAndUpdate(
+           {
+               nome: req.body.nome
+           },
+           req.body, {
+               upsert: true
+           }, function (err, doc) {
+               if (err) {
+                   res.status(500).json({ error: err.message });
+                   res.end();
+                   return;
+               }
+               res.json(req.body);
+               res.end();
+           }
+       )*/
+    }
+
     async removeId (req, res) {
-        dadoPessoa = await Pessoa.remove({ idPessoa: req.body.Pessoa.idPessoa })
+        dadoPessoa = await Pessoa.deleteOne({ idPessoa: req.body.Pessoa.idPessoa }, function ( err, result) {
+            if (err) {
+                res.send(err);
+            } else {
+                res.send(result);
+            }
+        });
     }
 }
 

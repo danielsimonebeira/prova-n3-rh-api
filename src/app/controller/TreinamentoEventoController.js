@@ -14,6 +14,16 @@ class TreinamentoEventoController {
         return res.status(200).json(dadoEvento);
     }
 
+    async buscaNome(req, res) {
+        dadoEvento = await SalaEvento.findOne({ nome: new RegExp('^' + req.body.nome + '$', "i")}, function (err, doc) {
+            if (err) { 
+                console.log(err); 
+            } else {
+                return res.status(201).json(dadoEvento);
+            }
+        });
+    }
+
     async atualiza(req, res) {
         dadoEvento = await SalaEvento.findOneAndUpdate({
             status: "yes",

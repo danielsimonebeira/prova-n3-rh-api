@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const RhEventoSchema = new mongoose.Schema(
+const TreinamentoEventoSchema = new mongoose.Schema(
     {
         evento: {
             idSala: {
@@ -18,4 +18,4 @@ const RhEventoSchema = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("RhEvento", RhEventoSchema);
+module.exports = mongoose.model("TreinamentoEvento", TreinamentoEventoSchema);

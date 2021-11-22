@@ -13,11 +13,13 @@ routes.get('/', function(req, res) {
 
 routes.post('/api/v1/treinamento/pessoa', TreinamentoPessoaController.adiciona);
 routes.get('/api/v1/treinamento/pessoa', TreinamentoPessoaController.buscaTodos);
+routes.get('/api/v1/treinamento/pessoa/:nome', TreinamentoPessoaController.buscaNome);
 routes.put('/api/v1/treinamento/pessoa/:nome', TreinamentoPessoaController.atualiza);
 routes.delete('/api/v1/treinamento/pessoa/:idPessoa', TreinamentoPessoaController.removeId);
 
 routes.post('/api/v1/treinamento/evento', TreinamentoEventoController.adiciona);
 routes.get('/api/v1/treinamento/evento', TreinamentoEventoController.buscaTodos);
+routes.get('/api/v1/treinamento/evento/:nome', TreinamentoEventoController.buscaNome);
 routes.put('/api/v1/treinamento/evento/:nome', TreinamentoEventoController.atualiza);
 routes.delete('/api/v1/treinamento/evento/:idPessoa', TreinamentoEventoController.removeId);
 
