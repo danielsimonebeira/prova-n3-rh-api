@@ -15,6 +15,19 @@ Inserir a variaveis:
 
 `PORT=<numeto_porta>`
 
+## Tecnologias Necessárias para rodar
+
+Node - `npm / yarn`
+
+## Compilar o projeto
+
+Etapas: 2
+
+Etapa 1: Que será para instalar as dependências e rodando na raiz do projeto
+`npm install ou yarn install` 
+
+Etapa 2: Que será para rodar a aplicação de fato no desenvolvimento
+`npm run dev ou yarn dev`
 
 
 ## Rodar o sistema no modo de produção
