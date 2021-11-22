@@ -1,6 +1,5 @@
 const express = require('express');
 
-
 const routes = express.Router();
 const TreinamentoController = require('./app/controller/TreinamentoController');
 
@@ -10,7 +9,6 @@ routes.get('/', function(req, res) {
         version: '1.0.0'
     })
 });
-
 
 routes.post('/api/v1/treinamento', TreinamentoController.adiciona);
 

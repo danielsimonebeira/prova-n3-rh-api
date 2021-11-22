@@ -44,4 +44,5 @@ class App {
         this.express.use(routes);
     }
 }
+
 module.exports = new App().express;
