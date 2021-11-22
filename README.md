@@ -26,10 +26,10 @@ Inserir a variaveis:
 
 Etapas: 2
 
-Etapa 1: Que será para instalar as dependências e rodando na raiz do projeto
+Etapa 1: Será para instalar as dependências e rodando na raiz do projeto:
 `npm install ou yarn install` 
 
-Etapa 2: Que será para rodar a aplicação, de fato, no desenvolvimento
+Etapa 2: Será para rodar a aplicação, de fato, no desenvolvimento:
 `npm run dev ou yarn dev`
 
 
