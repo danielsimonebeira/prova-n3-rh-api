@@ -1,9 +1,8 @@
 const Pessoa = require('../model/TreinamentoPessoa');
-const SalaEvento = require('../model/TreiamentoEvento');
 
 let dadoPessoa = '';
 
-class TreinamentoController {
+class TreinamentoPessoaController {
     
     async adiciona(req, res, next) {
         dadoPessoa = await Pessoa.create(req.body);
@@ -37,4 +36,4 @@ class TreinamentoController {
     }
 }
 
-module.exports = new TreinamentoController();
+module.exports = new TreinamentoPessoaController();
