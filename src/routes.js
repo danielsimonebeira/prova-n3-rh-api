@@ -19,9 +19,9 @@ routes.delete('/api/v1/treinamento/pessoa/:idPessoa', TreinamentoPessoaControlle
 
 routes.post('/api/v1/treinamento/evento', TreinamentoEventoController.adiciona);
 routes.get('/api/v1/treinamento/evento', TreinamentoEventoController.buscaTodos);
-routes.get('/api/v1/treinamento/evento/:nome', TreinamentoEventoController.buscaNome);
+routes.get('/api/v1/treinamento/evento/:idSala', TreinamentoEventoController.buscaId);
 routes.put('/api/v1/treinamento/evento/:nome', TreinamentoEventoController.atualiza);
-routes.delete('/api/v1/treinamento/evento/:idPessoa', TreinamentoEventoController.removeId);
+routes.delete('/api/v1/treinamento/evento/:idSala', TreinamentoEventoController.removeId);
 
 
 module.exports = routes;

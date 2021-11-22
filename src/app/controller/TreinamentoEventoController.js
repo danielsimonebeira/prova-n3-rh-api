@@ -14,14 +14,10 @@ class TreinamentoEventoController {
         return res.status(200).json(dadoEvento);
     }
 
-    async buscaNome(req, res) {
-        dadoEvento = await SalaEvento.findOne({ nome: new RegExp('^' + req.body.nome + '$', "i")}, function (err, doc) {
-            if (err) { 
-                console.log(err); 
-            } else {
-                return res.status(201).json(dadoEvento);
-            }
-        });
+    async buscaId(req, res) {
+        dadoEvento = await SalaEvento.findOne({ idSala: req.body.idSala }).exec();
+        return res.status(200).json(dadoEvento);
+
     }
 
     async atualiza(req, res) {
@@ -42,7 +38,8 @@ class TreinamentoEventoController {
     }
 
     async removeId (req, res) {
-        dadoEvento = await SalaEvento.remove({ idSala: req.body.SalaEvento.idSala })
+        dadoEvento = await SalaEvento.deleteOne({ idSala: req.body.idSala })
+        return res.status(201).json(dadoEvento);
     }
 }
 
