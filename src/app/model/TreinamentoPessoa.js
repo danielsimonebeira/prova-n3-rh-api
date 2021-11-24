@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const RhPessoaSchema = new mongoose.Schema(
+const TreinamentoPessoaSchema = new mongoose.Schema(
     {
         pessoa: {
             idPessoa: {
@@ -26,4 +26,4 @@ const RhPessoaSchema = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("RhPessoa", RhPessoaSchema);
+module.exports = mongoose.model("TreinamentoPessoa", TreinamentoPessoaSchema);
