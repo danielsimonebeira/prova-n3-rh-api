@@ -1,6 +1,7 @@
-# prova-n3-rh-api
 
-Projeto criado para a N3 da disciplina de Linguagem de Programação III [2021/2] da Faculdade Cesusc
+<h1 align="center">prova-n3-rh-api</h1>
+
+Projeto criado para a N3 da disciplina de Linguagem de Programação III [2021/2] da Faculdade Cesusc.
 
 A Faculdade Cesusc irá realizar uma capacitação para uma grande empresa de Florianópolis, especializada em gestão de recursos humanos. O treinamento será realizado em duas etapas e as pessoas serão divididas em salas com lotação variável. Serão realizados, também, dois intervalos de café em dois espaços distintos. A partir deste cenário, você foi contratado para desenvolver o back-end do sistema que gerenciará este evento.
 
@@ -24,20 +25,26 @@ A Faculdade Cesusc irá realizar uma capacitação para uma grande empresa de Fl
 
 `PORT=<numeto_porta>`
 
+## Tecnologias Necessárias para rodar
+
+- Node - `npm / yarn`
+- mongoose
+- Postman
+- Linguagem JS
+
+## Compilar o projeto
+
 ## Para instalar as dependêcias
 
 `yarn install` / `npm install`
-
 
 ## Rodar o sistema no modo de produção
 
 `yarn start` / `npm run start`
 
-
 ## Rodar o sistema no modo de desenvolvimento
 
 `yarn dev` / `npm run dev`
-
 
 ## Rotas da aplicação/endpoints
 
